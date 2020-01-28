@@ -1,0 +1,34 @@
+body {
+  padding: 0px;
+  margin: 0;
+}
+
+.website {
+  padding: 4px;
+  text-align: center;
+}
+
+.iframe {
+  height: 500px;
+}
+
+/* Small (sm) */
+@media (max-width: 640px) {
+  .website { width: 98%; }
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+  .website { width: 48%; }
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+  .website { width: 32%; }
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) {
+  .website { width: 384px; }
+  .iframe { height: 896.4px; }
+}
