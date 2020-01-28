@@ -31,11 +31,7 @@ export default () => {
         <title>实时疫情信息聚合</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'flex-start'
-      }}>
+      <div className='container'>
         {iframes}
       </div>
     </>

@@ -3,6 +3,12 @@ body {
   margin: 0;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .website {
   padding: 4px;
   text-align: center;
