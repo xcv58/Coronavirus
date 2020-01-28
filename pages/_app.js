@@ -8,7 +8,7 @@ const websites = [
   { name: '百度', url: 'https://voice.baidu.com/act/newpneumonia/newpneumonia', },
   { name: '人民日报', url: 'https://activity.peopleapp.com/broadcast/', },
   { name: '搜狗搜索', url: 'https://sa.sogou.com/new-weball/page/sgs/epidemic' },
-  { name: '梅斯', url: 'https://m.medsci.cn/wh.asp', },
+  { name: '梅斯', url: 'https://m.medsci.cn/wh.asp' }
 ]
 
 export default () => {
