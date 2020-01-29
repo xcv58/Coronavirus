@@ -33,7 +33,7 @@ function SEO({ description, lang, meta, title = "实时疫情信息聚合" }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s`}
       meta={[
         {
           name: `description`,
