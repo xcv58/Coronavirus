@@ -17,11 +17,15 @@ body {
 .wide-website {
   padding: 4px;
   text-align: center;
-  width: 896.4px;
+  width: 1024px;
 }
 
 .iframe {
   height: 500px;
+}
+
+a {
+  font-size: 2rem;
 }
 
 /* Small (sm) */
