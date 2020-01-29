@@ -9606,6 +9606,15 @@ react-reconciler@^0.24.0:
     prop-types "^15.6.2"
     scheduler "^0.18.0"
 
+react-scroll-progress-bar@^1.1.11:
+  version "1.1.11"
+  resolved "https://registry.yarnpkg.com/react-scroll-progress-bar/-/react-scroll-progress-bar-1.1.11.tgz#fad8ce042b91232894613981dd7fd83cb578e84f"
+  integrity sha512-xvBnHZTRFHWBpCaI6kc0Xif9b+nd1Zca6Z1I82xJTJHYEFdxE0aUemjUsfSznV4mALVxobuMucVQhFBXHb0pLw==
+  dependencies:
+    prop-types "^15.7.2"
+    react "^16.12.0"
+    react-dom "^16.12.0"
+
 react-side-effect@^1.1.0:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-1.1.5.tgz#f26059e50ed9c626d91d661b9f3c8bb38cd0ff2d"

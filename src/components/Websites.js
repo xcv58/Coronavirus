@@ -5,7 +5,7 @@ import "./styles.css"
 const websites = [
   { name: "丁香园", url: "https://3g.dxy.cn/newh5/view/pneumonia" },
   { name: "腾讯新闻", url: "https://news.qq.com/zt2020/page/feiyan.htm" },
-  { name: '凤凰新闻', url: 'https://news.ifeng.com/c/special/7tPlDSzDgVk' },
+  { name: "凤凰新闻", url: "https://news.ifeng.com/c/special/7tPlDSzDgVk" },
   { name: "梅斯", url: "https://m.medsci.cn/wh.asp" },
   { name: "Johns Hopkins University", url: "https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6", className: "wide-website", },
   { name: "搜狗搜索", url: "https://sa.sogou.com/new-weball/page/sgs/epidemic", },
