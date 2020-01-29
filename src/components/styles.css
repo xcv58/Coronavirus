@@ -14,6 +14,12 @@ body {
   text-align: center;
 }
 
+.wide-website {
+  padding: 4px;
+  text-align: center;
+  width: 896.4px;
+}
+
 .iframe {
   height: 500px;
 }

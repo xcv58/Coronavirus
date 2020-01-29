@@ -15,11 +15,17 @@ const websites = [
     url: "https://sa.sogou.com/new-weball/page/sgs/epidemic",
   },
   { name: "梅斯", url: "https://m.medsci.cn/wh.asp" },
+  {
+    name: "Johns Hopkins University",
+    url:
+      "https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6",
+    className: "wide-website",
+  },
 ]
 
 export default () => {
-  const iframes = websites.map(({ name, url }) => (
-    <div key={url} className="website">
+  const iframes = websites.map(({ name, url, className = "website" }) => (
+    <div key={url} className={className}>
       <a href={url} target="_blank" rel="noopener noreferrer">
         {name}
       </a>
