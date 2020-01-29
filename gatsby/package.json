@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "coronavirus",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Collection of websites to track Coronavirus",
+  "version": "0.0.1",
+  "author": "xcv58 <i@xcv58.com>",
   "dependencies": {
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
@@ -23,6 +23,7 @@
     "prettier": "^1.19.1"
   },
   "keywords": [
+    "coronavirus",
     "gatsby"
   ],
   "license": "MIT",
