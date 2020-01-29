@@ -1,0 +1,9 @@
+{
+  "name": "coronavirus",
+  "version": 2,
+  "build": {
+    "env": {
+      "GA_TRACKING_ID": "@coronavirus-ga-tracking-id"
+    }
+  }
+}
