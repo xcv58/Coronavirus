@@ -11,11 +11,11 @@ const getRenderUrl = ({ url, isChinese, supportGoogleTranslate, lang }) => {
   if (!isChinese) {
     return url
   }
-  if (!supportGoogleTranslate) {
-    return null
-  }
   switch (lang) {
     case EN:
+      if (!supportGoogleTranslate) {
+        return null
+      }
       return `${TRANSLATE_URL_PREFIX}${url}`
     default:
   }
