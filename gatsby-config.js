@@ -19,11 +19,12 @@ module.exports = {
         display: `minimal-ui`,
       },
     },
+    'gatsby-plugin-antd',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GA_TRACKING_ID,
-        head: true,
+        head: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
