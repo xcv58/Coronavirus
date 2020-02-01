@@ -4,6 +4,7 @@ import Websites from "./Websites"
 import ProgressBar from "react-scroll-progress-bar"
 import Nav from "./Nav"
 import "antd/dist/antd.css"
+import { BackTop } from "antd"
 
 export default () => (
   <>
@@ -11,5 +12,6 @@ export default () => (
     <SEO />
     <Nav />
     <Websites />
+    <BackTop />
   </>
 )

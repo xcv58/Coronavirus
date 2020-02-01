@@ -5,6 +5,7 @@ body {
 
 .nav {
   text-align: right;
+  padding-right: 4px;
 }
 
 .container {

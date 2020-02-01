@@ -5,5 +5,9 @@
     "env": {
       "GA_TRACKING_ID": "@coronavirus-ga-tracking-id"
     }
-  }
+  },
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "404.html" }
+  ]
 }

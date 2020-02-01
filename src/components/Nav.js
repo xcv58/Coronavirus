@@ -11,6 +11,7 @@ export default () => {
     <div className="nav">
       <Select
         defaultValue={lang}
+        dropdownMatchSelectWidth={false}
         onChange={value => {
           navigate(value === ZH ? "/" : value)
         }}
@@ -20,7 +21,7 @@ export default () => {
             {name}
           </Option>
         ))}
-      </Select>
+      </Select> 🌐
     </div>
   )
 }
