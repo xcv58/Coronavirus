@@ -14,7 +14,8 @@ import { LangContext, EN } from "./LangContext"
 function SEO(props) {
   const lang = useContext(LangContext)
   const { description, meta } = props
-  const title = lang === EN ? 'Coronavirus realtime website' : '实时疫情信息聚合'
+  const title =
+    lang === EN ? "Coronavirus realtime website" : "实时疫情信息聚合"
   const { site } = useStaticQuery(
     graphql`
       query {

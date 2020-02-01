@@ -1,8 +1,9 @@
 import React, { useContext } from "react"
 import Iframe from "react-iframe"
 import "./styles.css"
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { LangContext, EN } from "./LangContext"
+import { Divider } from "antd"
 
 const TRANSLATE_URL_PREFIX =
   "https://translate.google.com/translate?hl=en&sl=zh-CN&tl=en&u="
@@ -35,7 +36,7 @@ export default props => {
         {name}
       </OutboundLink>
       <Iframe url={url} width="100%" className="iframe" loading="lazy" />
-      <hr />
+      <Divider />
     </div>
   )
 }

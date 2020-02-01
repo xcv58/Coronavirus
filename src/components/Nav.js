@@ -1,17 +1,26 @@
 import React, { useContext } from "react"
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import { LangContext, EN } from "./LangContext"
-import { Link } from "gatsby"
+import { LangContext, ZH, LANG_OPTIONS } from "./LangContext"
+import { navigate } from "gatsby"
+import { Select } from "antd"
 
+const { Option } = Select
 
 export default () => {
   const lang = useContext(LangContext)
-  const zh = <Link to='/'>中文</Link>
-  const en = <Link to='/en'>English</Link>
-  const link = lang === EN ? zh : en
   return (
-    <div className='nav'>
-      {link}
+    <div className="nav">
+      <Select
+        defaultValue={lang}
+        onChange={value => {
+          navigate(value === ZH ? "/" : value)
+        }}
+      >
+        {LANG_OPTIONS.map(({ value, name }) => (
+          <Option key={value} value={value}>
+            {name}
+          </Option>
+        ))}
+      </Select>
     </div>
   )
 }
