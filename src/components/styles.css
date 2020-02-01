@@ -9,15 +9,18 @@ body {
   justify-content: center;
 }
 
+iframe {
+  box-sizing: border-box;
+  border: 0;
+}
+
 .website {
   box-sizing: border-box;
-  padding: 4px;
   text-align: center;
 }
 
 .wide-website {
   box-sizing: border-box;
-  padding: 4px;
   text-align: center;
   width: 1024px;
 }

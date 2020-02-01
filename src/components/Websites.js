@@ -20,6 +20,7 @@ export default () => {
         {name}
       </a>
       <Iframe url={url} width="100%" className="iframe" loading='lazy' />
+      <hr />
     </div>
   ))
   return <div className="container">{iframes}</div>
