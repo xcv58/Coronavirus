@@ -19,7 +19,7 @@ export default () => {
       <a href={url} target="_blank" rel="noopener noreferrer">
         {name}
       </a>
-      <Iframe url={url} width="100%" className="iframe" />
+      <Iframe url={url} width="100%" className="iframe" loading='lazy' />
     </div>
   ))
   return <div className="container">{iframes}</div>
