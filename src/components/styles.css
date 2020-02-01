@@ -10,11 +10,13 @@ body {
 }
 
 .website {
+  box-sizing: border-box;
   padding: 4px;
   text-align: center;
 }
 
 .wide-website {
+  box-sizing: border-box;
   padding: 4px;
   text-align: center;
   width: 1024px;
@@ -30,17 +32,17 @@ a {
 
 /* Small (sm) */
 @media (max-width: 640px) {
-  .website { width: 98%; }
+  .website { width: 100%; }
 }
 
 /* Medium (md) */
 @media (min-width: 768px) {
-  .website { width: 48%; }
+  .website { width: 50%; }
 }
 
 /* Large (lg) */
 @media (min-width: 1024px) {
-  .website { width: 32%; }
+  .website { width: 33.33%; }
 }
 
 /* Extra Large (xl) */
