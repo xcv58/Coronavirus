@@ -3,6 +3,7 @@ import Iframe from "react-iframe"
 import "./styles.css"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { LangContext, EN } from "./LangContext"
+import { Divider } from "antd"
 
 const TRANSLATE_URL_PREFIX =
   "https://translate.google.com/translate?hl=en&sl=zh-CN&tl=en&u="
@@ -31,9 +32,11 @@ export default props => {
   }
   return (
     <div className={className}>
-      <OutboundLink href={url} target="_blank" rel="noopener noreferrer">
-        {name}
-      </OutboundLink>
+      <Divider>
+        <OutboundLink href={url} target="_blank" rel="noopener noreferrer">
+          {name}
+        </OutboundLink>
+      </Divider>
       <Iframe url={url} width="100%" className="iframe" loading="lazy" />
       <hr />
     </div>
