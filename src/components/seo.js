@@ -5,12 +5,16 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { LangContext, EN } from "./LangContext"
 
-function SEO({ description, lang, meta, title = "实时疫情信息聚合" }) {
+function SEO(props) {
+  const lang = useContext(LangContext)
+  const { description, meta } = props
+  const title = lang === EN ? 'Coronavirus realtime website' : '实时疫情信息聚合'
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -29,9 +33,7 @@ function SEO({ description, lang, meta, title = "实时疫情信息聚合" }) {
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
+      htmlAttributes={{ lang }}
       title={title}
       titleTemplate={`%s`}
       meta={[
@@ -73,16 +75,14 @@ function SEO({ description, lang, meta, title = "实时疫情信息聚合" }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
   meta: [],
   description: ``,
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
-  lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default SEO
