@@ -39,10 +39,6 @@ iframe {
   align-items: center;
 }
 
-.title .link {
-  flex: 1;
-}
-
 a {
   font-size: 2rem;
 }
