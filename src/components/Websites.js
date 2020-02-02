@@ -5,6 +5,7 @@ import Website from "./Website"
 const websites = [
   { isChinese: true, supportGoogleTranslate: true, name: "腾讯新闻", url: "https://news.qq.com/zt2020/page/feiyan.htm", },
   { isChinese: true, supportGoogleTranslate: true, name: "梅斯", url: "https://m.medsci.cn/wh.asp", },
+  { isChinese: true, supportGoogleTranslate: true, name: "肺炎疫情新增明细", url: "https://yiqing.limou.cc", },
   { isChinese: true, supportGoogleTranslate: false, name: "丁香园", url: "https://3g.dxy.cn/newh5/view/pneumonia", },
   { isChinese: true, supportGoogleTranslate: false, name: "凤凰新闻", url: "https://news.ifeng.com/c/special/7tPlDSzDgVk", },
   { isChinese: true, supportGoogleTranslate: false, name: "搜狗搜索", url: "https://sa.sogou.com/new-weball/page/sgs/epidemic", },
