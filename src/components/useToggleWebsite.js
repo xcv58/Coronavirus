@@ -2,12 +2,12 @@ import React from "react"
 
 const useToggleWebsite = () => {
   const [hiddenSet, setHiddenSet] = React.useState(new Set())
-  const toggleWebsite = url => {
+  const toggleWebsite = website => {
     const newSet = new Set(hiddenSet)
-    if (hiddenSet.has(url)) {
-      newSet.delete(url)
+    if (hiddenSet.has(website)) {
+      newSet.delete(website)
     } else {
-      newSet.add(url)
+      newSet.add(website)
     }
     setHiddenSet(newSet)
   }

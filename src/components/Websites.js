@@ -19,7 +19,7 @@ export const websites = [
 export default () => {
   const [hiddenSet, toggleWebsite] = useToggleWebsite()
   const sites = websites.map(website => {
-    const isHidden = hiddenSet.has(website.url)
+    const isHidden = hiddenSet.has(website.name)
     return (
       <Website
         key={website.name}

@@ -55,13 +55,13 @@ export default props => {
   return (
     <Col {...span}>
       <Collapse
-        activeKey={isHidden ? "" : url}
+        activeKey={isHidden ? "" : name}
         expandIconPosition="right"
         bordered={false}
-        onChange={() => toggleWebsite(url)}
+        onChange={() => toggleWebsite(name)}
       >
         <Collapse.Panel
-          key={url}
+          key={name}
           header={title}
           bordered={false}
           extra={
