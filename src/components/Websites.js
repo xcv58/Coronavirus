@@ -62,6 +62,12 @@ export const WEBSITES = [
   {
     isChinese: true,
     supportGoogleTranslate: false,
+    name: "新浪",
+    url: "https://news.sina.cn/zt_d/yiqing0121",
+  },
+  {
+    isChinese: true,
+    supportGoogleTranslate: false,
     name: "人民日报",
     url: "https://activity.peopleapp.com/broadcast/",
   },
