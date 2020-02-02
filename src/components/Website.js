@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react"
 import Iframe from "react-iframe"
 import { LangContext, EN } from "./LangContext"
-import { Skeleton, Collapse, Col } from "antd"
+import { Skeleton, Button, Collapse, Col, Divider } from "antd"
 import WebsiteTitle from "./WebsiteTitle"
 
 const TRANSLATE_URL_PREFIX =
@@ -60,7 +60,26 @@ export default props => {
         bordered={false}
         onChange={() => toggleWebsite(url)}
       >
-        <Collapse.Panel key={url} header={title} bordered={false}>
+        <Collapse.Panel
+          key={url}
+          header={title}
+          bordered={false}
+          extra={
+            <>
+              <Button
+                icon="reload"
+                loading={loading}
+                disabled={loading}
+                onClick={e => {
+                  e.stopPropagation()
+                  setTimeout(() => setLoading(false), 640)
+                  setLoading(true)
+                }}
+              />
+              <Divider type="vertical" />
+            </>
+          }
+        >
           <Website {...{ loading, url }} />
         </Collapse.Panel>
       </Collapse>
