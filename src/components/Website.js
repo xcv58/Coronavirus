@@ -61,7 +61,6 @@ export default props => {
         </div>
       </Divider>
       {loading ? skeleton : website}
-      <hr />
     </div>
   )
 }
