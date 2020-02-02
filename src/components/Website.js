@@ -27,14 +27,20 @@ export default props => {
   const { name, className = "website" } = props
   const lang = useContext(LangContext)
   const url = getRenderUrl({ ...props, lang })
-  const [loading, updateLoading] = useState(false)
+  const [loading, setLoading] = useState(false)
   if (!url) {
     return null
   }
   const website = (
     <Iframe url={url} width="100%" className="iframe" loading="auto" />
   )
-  const skeleton = <Skeleton active className="iframe" />
+  const skeleton = (
+    <div className="iframe">
+      <Skeleton active />
+      <Skeleton active />
+      <Skeleton active />
+    </div>
+  )
   return (
     <div className={className}>
       <Divider>
@@ -48,8 +54,8 @@ export default props => {
             loading={loading}
             disabled={loading}
             onClick={() => {
-              setTimeout(() => updateLoading(false), 640)
-              updateLoading(true)
+              setTimeout(() => setLoading(false), 640)
+              setLoading(true)
             }}
           />
         </div>
