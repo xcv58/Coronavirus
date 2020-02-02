@@ -11,7 +11,16 @@ const useToggleWebsite = () => {
     }
     setHiddenSet(newSet)
   }
-  return [hiddenSet, toggleWebsite]
+  const showAll = () => setHiddenSet(new Set())
+  const hideAll = websites => {
+    setHiddenSet(new Set(websites))
+  }
+  return {
+    hiddenSet,
+    toggleWebsite,
+    showAll,
+    hideAll,
+  }
 }
 
 export default useToggleWebsite

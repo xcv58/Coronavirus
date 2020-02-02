@@ -6,13 +6,17 @@ import Nav from "./Nav"
 import "antd/dist/antd.css"
 import "./styles.css"
 import { BackTop } from "antd"
+import useToggleWebsite from "./useToggleWebsite"
 
-export default () => (
-  <>
-    <ProgressBar />
-    <SEO />
-    <Nav />
-    <Websites />
-    <BackTop />
-  </>
-)
+export default () => {
+  const toggleWebsite = useToggleWebsite()
+  return (
+    <>
+      <ProgressBar />
+      <SEO />
+      <Nav {...toggleWebsite} />
+      <Websites {...toggleWebsite} />
+      <BackTop />
+    </>
+  )
+}
