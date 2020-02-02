@@ -7,7 +7,9 @@ export default props => {
   return (
     <div className="title">
       <OutboundLink href={url} target="_blank" rel="noopener noreferrer">
-        {name}
+        <Button type="link" onClick={e => e.stopPropagation()}>
+          {name}
+        </Button>
       </OutboundLink>
       <Divider type="vertical" />
       <Button
@@ -15,7 +17,8 @@ export default props => {
         size="small"
         loading={loading}
         disabled={loading}
-        onClick={() => {
+        onClick={e => {
+          e.stopPropagation()
           setTimeout(() => setLoading(false), 640)
           setLoading(true)
         }}

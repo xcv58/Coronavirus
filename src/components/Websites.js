@@ -1,9 +1,9 @@
-import React, { useState } from "react"
-import "./styles.css"
-import Website from "./Website"
+import React from "react"
 import { Row } from "antd"
+import Website from "./Website"
+import useToggleWebsite from "./useToggleWebsite"
 
-const websites = [
+export const websites = [
   { isChinese: true, supportGoogleTranslate: true, name: "腾讯新闻", url: "https://news.qq.com/zt2020/page/feiyan.htm", },
   { isChinese: true, supportGoogleTranslate: true, name: "梅斯", url: "https://m.medsci.cn/wh.asp", },
   { isChinese: true, supportGoogleTranslate: true, name: "疫情新增明细", url: "https://yiqing.limou.cc", },
@@ -17,19 +17,9 @@ const websites = [
 ]
 
 export default () => {
-  const [hiddenSet, setHiddenSet] = useState(new Set())
-  const toggleWebsite = url => {
-    const newSet = new Set(hiddenSet)
-    if (hiddenSet.has(url)) {
-      newSet.delete(url)
-    } else {
-      newSet.add(url)
-    }
-    setHiddenSet(newSet)
-  }
+  const [hiddenSet, toggleWebsite] = useToggleWebsite()
   const sites = websites.map(website => {
-    const { url } = website
-    const isHidden = hiddenSet.has(url)
+    const isHidden = hiddenSet.has(website.url)
     return (
       <Website
         key={website.name}
