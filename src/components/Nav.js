@@ -21,7 +21,8 @@ export default () => {
             {name}
           </Option>
         ))}
-      </Select> 🌐
+      </Select>{" "}
+      🌐
     </div>
   )
 }

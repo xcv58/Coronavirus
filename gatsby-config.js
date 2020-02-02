@@ -19,7 +19,7 @@ module.exports = {
         display: `minimal-ui`,
       },
     },
-    'gatsby-plugin-antd',
+    "gatsby-plugin-antd",
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
