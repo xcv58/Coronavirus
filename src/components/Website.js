@@ -1,9 +1,8 @@
 import React, { useContext, useState } from "react"
 import Iframe from "react-iframe"
-import "./styles.css"
-import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { LangContext, EN } from "./LangContext"
-import { Divider, Button, Skeleton } from "antd"
+import { Skeleton, Collapse, Col } from "antd"
+import WebsiteTitle from "./WebsiteTitle"
 
 const TRANSLATE_URL_PREFIX =
   "https://translate.google.com/translate?hl=en&sl=zh-CN&tl=en&u="
@@ -23,44 +22,48 @@ const getRenderUrl = ({ url, isChinese, supportGoogleTranslate, lang }) => {
   return url
 }
 
+const Website = ({ loading, url }) => {
+  const className = "iframe"
+  if (loading) {
+    return (
+      <div className={className}>
+        <Skeleton active />
+        <Skeleton active />
+        <Skeleton active />
+      </div>
+    )
+  }
+  return <Iframe url={url} width="100%" className={className} loading="auto" />
+}
+
 export default props => {
-  const { name, className = "website" } = props
+  const { name, large, isHidden, toggleWebsite } = props
   const lang = useContext(LangContext)
   const url = getRenderUrl({ ...props, lang })
   const [loading, setLoading] = useState(false)
   if (!url) {
     return null
   }
-  const website = (
-    <Iframe url={url} width="100%" className="iframe" loading="auto" />
-  )
-  const skeleton = (
-    <div className="iframe">
-      <Skeleton active />
-      <Skeleton active />
-      <Skeleton active />
-    </div>
-  )
+  const factor = large ? 2 : 1
+  const span = {
+    sm: factor * 12,
+    md: factor * 8,
+    lg: factor * 6,
+    xxl: factor * 4,
+  }
+  const title = <WebsiteTitle {...{ name, url, loading, setLoading }} />
   return (
-    <div className={className}>
-      <Divider>
-        <div className="title">
-          <OutboundLink href={url} target="_blank" rel="noopener noreferrer">
-            {name}
-          </OutboundLink>
-          <Divider type='vertical' />
-          <Button
-            icon="reload"
-            loading={loading}
-            disabled={loading}
-            onClick={() => {
-              setTimeout(() => setLoading(false), 640)
-              setLoading(true)
-            }}
-          />
-        </div>
-      </Divider>
-      {loading ? skeleton : website}
-    </div>
+    <Col {...span}>
+      <Collapse
+        activeKey={isHidden ? "" : url}
+        expandIconPosition="right"
+        bordered={false}
+        onChange={() => toggleWebsite(url)}
+      >
+        <Collapse.Panel key={url} header={title} bordered={false}>
+          <Website {...{ loading, url }} />
+        </Collapse.Panel>
+      </Collapse>
+    </Col>
   )
 }
