@@ -36,3 +36,8 @@ a {
 .ant-collapse-content > .ant-collapse-content-box {
   padding: 0 !important;
 }
+
+@media (min-width: 1921px) {
+  .website { width: 414px; }
+  .wide-website { width: 896.4; }
+}

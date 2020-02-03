@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react"
 import Iframe from "react-iframe"
 import { LangContext, EN } from "./LangContext"
 import { Skeleton, Button, Collapse, Col, Divider } from "antd"
+import classNames from "classnames"
 import WebsiteTitle from "./WebsiteTitle"
 
 const TRANSLATE_URL_PREFIX =
@@ -53,7 +54,13 @@ export default props => {
   }
   const title = <WebsiteTitle {...{ name, url, loading, setLoading }} />
   return (
-    <Col {...span}>
+    <Col
+      {...span}
+      className={classNames({
+        website: !large,
+        "wide-website": large,
+      })}
+    >
       <Collapse
         activeKey={isHidden ? "" : name}
         expandIconPosition="right"
@@ -65,19 +72,21 @@ export default props => {
           header={title}
           bordered={false}
           extra={
-            <>
-              <Button
-                icon="reload"
-                loading={loading}
-                disabled={loading}
-                onClick={e => {
-                  e.stopPropagation()
-                  setTimeout(() => setLoading(false), 640)
-                  setLoading(true)
-                }}
-              />
-              <Divider type="vertical" />
-            </>
+            !isHidden && (
+              <>
+                <Button
+                  icon="reload"
+                  loading={loading}
+                  disabled={loading}
+                  onClick={e => {
+                    e.stopPropagation()
+                    setTimeout(() => setLoading(false), 640)
+                    setLoading(true)
+                  }}
+                />
+                <Divider type="vertical" />
+              </>
+            )
           }
         >
           <Website {...{ loading, url }} />

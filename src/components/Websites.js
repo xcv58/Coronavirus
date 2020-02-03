@@ -34,12 +34,6 @@ export const WEBSITES = [
     url: "https://news.ifeng.com/c/special/7tPlDSzDgVk",
   },
   {
-    isChinese: true,
-    supportGoogleTranslate: false,
-    name: "搜狗搜索",
-    url: "https://sa.sogou.com/new-weball/page/sgs/epidemic",
-  },
-  {
     isChinese: false,
     supportGoogleTranslate: true,
     name: "BNO",
@@ -52,6 +46,12 @@ export const WEBSITES = [
     url:
       "https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6",
     large: true,
+  },
+  {
+    isChinese: true,
+    supportGoogleTranslate: false,
+    name: "搜狗搜索",
+    url: "https://sa.sogou.com/new-weball/page/sgs/epidemic",
   },
   {
     isChinese: true,
