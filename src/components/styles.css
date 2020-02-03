@@ -38,6 +38,6 @@ a {
 }
 
 @media (min-width: 1921px) {
-  .website { width: 414px; }
-  .wide-website { width: 896.4; }
+  .website { width: 414px !important; }
+  .wide-website { width: 896.4px !important; }
 }
