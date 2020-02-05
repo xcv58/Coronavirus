@@ -1,9 +1,10 @@
 import createPersistedState from "use-persisted-state"
+import { WEBSITES } from "./Websites";
 
 const useHiddenWebsites = createPersistedState("hidden-websites")
 
 const useToggleWebsite = () => {
-  const [hiddenWebsites, setHiddenWebsites] = useHiddenWebsites("")
+  const [hiddenWebsites, setHiddenWebsites] = useHiddenWebsites(WEBSITES.map(x => x.name).join(","))
   const hiddenSet = new Set(hiddenWebsites.split(","))
   const toggleWebsite = website => {
     const newSet = new Set(hiddenSet)
