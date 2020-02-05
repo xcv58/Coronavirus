@@ -65,6 +65,7 @@ export default props => {
         activeKey={isHidden ? "" : name}
         expandIconPosition="right"
         bordered={false}
+        destroyInactivePanel
         onChange={() => toggleWebsite(name)}
       >
         <Collapse.Panel

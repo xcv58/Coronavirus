@@ -1,7 +1,10 @@
-import React from "react"
+import createPersistedState from "use-persisted-state"
+
+const useHiddenWebsites = createPersistedState("hidden-websites")
 
 const useToggleWebsite = () => {
-  const [hiddenSet, setHiddenSet] = React.useState(new Set())
+  const [hiddenWebsites, setHiddenWebsites] = useHiddenWebsites("")
+  const hiddenSet = new Set(hiddenWebsites.split(","))
   const toggleWebsite = website => {
     const newSet = new Set(hiddenSet)
     if (hiddenSet.has(website)) {
@@ -9,11 +12,11 @@ const useToggleWebsite = () => {
     } else {
       newSet.add(website)
     }
-    setHiddenSet(newSet)
+    setHiddenWebsites([...newSet].join(","))
   }
-  const showAll = () => setHiddenSet(new Set())
+  const showAll = () => setHiddenWebsites("")
   const hideAll = websites => {
-    setHiddenSet(new Set(websites))
+    setHiddenWebsites(websites.join(","))
   }
   return {
     hiddenSet,
