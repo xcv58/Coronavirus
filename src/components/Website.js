@@ -23,15 +23,16 @@ const getRenderUrl = ({ url, isChinese, supportGoogleTranslate, lang }) => {
   return url
 }
 
-const Website = ({ url }) => {
+const Website = ({ loading, url }) => {
   const className = "iframe"
   const [isPending, setPending] = useState(true)
   useEffect(() => {
-    if (isPending) {
-      setTimeout(() => setPending(false), 640)
+    if (loading) {
+      setPending(true)
     }
-  }, [isPending])
-  const loadingIndicator = isPending && (
+    setTimeout(() => setPending(false), 640)
+  }, [loading])
+  const loadingIndicator = (isPending || loading) && (
     <div className={className}>
       <Skeleton active />
       <Skeleton active />
@@ -41,14 +42,16 @@ const Website = ({ url }) => {
   return (
     <>
       {loadingIndicator}
-      <Iframe
-        url={url}
-        width="100%"
-        className={classNames(className, {
-          hide: isPending,
-        })}
-        loading="auto"
-      />
+      {!loading && (
+        <Iframe
+          url={url}
+          width="100%"
+          className={classNames(className, {
+            hide: isPending,
+          })}
+          loading="auto"
+        />
+      )}
     </>
   )
 }
@@ -106,7 +109,7 @@ export default props => {
             )
           }
         >
-          {!isHidden && !loading && <Website {...{ url }} />}
+          {!isHidden && <Website {...{ loading, url }} />}
         </Collapse.Panel>
       </Collapse>
     </Col>
