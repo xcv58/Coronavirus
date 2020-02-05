@@ -41,3 +41,7 @@ a {
   .website { width: 414px !important; }
   .wide-website { width: 896.4px !important; }
 }
+
+.hide {
+  display: none !important;
+}

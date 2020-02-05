@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import Iframe from "react-iframe"
 import { LangContext, EN } from "./LangContext"
 import { Skeleton, Button, Collapse, Col, Divider } from "antd"
@@ -25,16 +25,35 @@ const getRenderUrl = ({ url, isChinese, supportGoogleTranslate, lang }) => {
 
 const Website = ({ loading, url }) => {
   const className = "iframe"
-  if (loading) {
-    return (
-      <div className={className}>
-        <Skeleton active />
-        <Skeleton active />
-        <Skeleton active />
-      </div>
-    )
-  }
-  return <Iframe url={url} width="100%" className={className} loading="auto" />
+  const [refresh, setRefresh] = useState(false)
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => setRefresh(false), 10)
+      setRefresh(true)
+    }
+  }, [loading])
+  const loadingIndicator = loading && (
+    <div className={className}>
+      <Skeleton active />
+      <Skeleton active />
+      <Skeleton active />
+    </div>
+  )
+  return (
+    <>
+      {loadingIndicator}
+      {!refresh && (
+        <Iframe
+          url={url}
+          width="100%"
+          className={classNames(className, {
+            hide: loading,
+          })}
+          loading="auto"
+        />
+      )}
+    </>
+  )
 }
 
 export default props => {
@@ -90,7 +109,7 @@ export default props => {
             )
           }
         >
-          <Website {...{ loading, url }} />
+          {!isHidden && <Website {...{ loading, url }} />}
         </Collapse.Panel>
       </Collapse>
     </Col>
