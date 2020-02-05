@@ -43,5 +43,5 @@ a {
 }
 
 .hide {
-  display: none !important;
+  height: 0.01px !important;
 }
