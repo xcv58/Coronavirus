@@ -25,12 +25,12 @@ const getRenderUrl = ({ url, isChinese, supportGoogleTranslate, lang }) => {
 
 const Website = ({ loading, url }) => {
   const className = "iframe"
-  const [isPending, setPending] = useState(true)
+  const [isPending, setPending] = useState(false)
   useEffect(() => {
     if (loading) {
       setPending(true)
+      setTimeout(() => setPending(false), 640)
     }
-    setTimeout(() => setPending(false), 640)
   }, [loading])
   const loadingIndicator = (isPending || loading) && (
     <div className={className}>
