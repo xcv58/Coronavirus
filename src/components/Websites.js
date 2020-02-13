@@ -12,12 +12,6 @@ export const WEBSITES = [
   {
     isChinese: true,
     supportGoogleTranslate: true,
-    name: "梅斯",
-    url: "https://m.medsci.cn/wh.asp",
-  },
-  {
-    isChinese: true,
-    supportGoogleTranslate: true,
     name: "疫情新增明细",
     url: "https://yiqing.limou.cc",
   },
