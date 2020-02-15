@@ -41,7 +41,7 @@ const WebsiteComp = ({ loading, url }: any) => {
 export default (
   props: Website & { isHidden: boolean; toggleWebsite: Function }
 ) => {
-  const { name, large, isHidden, toggleWebsite, url } = props
+  const { name, large, isHidden, toggleWebsite, url, isChinese } = props
   const [loading, setLoading] = useState(false)
   if (!url) {
     return null
@@ -61,6 +61,7 @@ export default (
         website: !large,
         "wide-website": large,
       })}
+      lang={isChinese ? "zh" : "en"}
     >
       <Collapse
         activeKey={isHidden ? "" : name}

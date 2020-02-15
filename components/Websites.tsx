@@ -16,5 +16,9 @@ export default (props: any) => {
       />
     )
   })
-  return <Row>{sites}</Row>
+  return (
+    <main>
+      <Row>{sites}</Row>
+    </main>
+  )
 }

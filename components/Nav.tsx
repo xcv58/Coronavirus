@@ -12,7 +12,7 @@ export default (props: any) => {
   const isAllCollapsed =
     websites.filter(x => !hiddenSet.has(x.name)).length === 0
   return (
-    <div className="nav">
+    <nav>
       <Radio.Group value={lang} buttonStyle="outline">
         {LANG_OPTIONS.map(({ name, value }) => (
           <Radio.Button key={name} value={value}>
@@ -38,6 +38,6 @@ export default (props: any) => {
           }
         }}
       />
-    </div>
+    </nav>
   )
 }
