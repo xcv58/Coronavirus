@@ -29,10 +29,6 @@ iframe {
   align-items: center;
 }
 
-a {
-  font-size: 1.5rem;
-}
-
 .ant-collapse-content > .ant-collapse-content-box {
   padding: 0 !important;
 }

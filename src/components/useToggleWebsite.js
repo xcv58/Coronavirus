@@ -5,7 +5,9 @@ const useHiddenWebsites = createPersistedState("hidden-websites")
 
 const useToggleWebsite = () => {
   const [hiddenWebsites, setHiddenWebsites] = useHiddenWebsites(() => {
-    return WEBSITES.slice(3).map(x => x.name).join(",")
+    return WEBSITES.slice(3)
+      .map(x => x.name)
+      .join(",")
   })
   const hiddenSet = new Set(hiddenWebsites.split(","))
   const toggleWebsite = website => {

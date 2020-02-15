@@ -4,8 +4,9 @@ export const ZH = "zh"
 export const EN = "en"
 
 export const LANG_OPTIONS = [
-  { name: "English", value: EN },
+  { name: "All", value: "/" },
   { name: "中文", value: ZH },
+  { name: "English", value: EN },
 ]
 
-export const LangContext = createContext(ZH)
+export const LangContext = createContext("/")

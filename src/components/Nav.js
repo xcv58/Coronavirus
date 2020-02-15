@@ -1,10 +1,8 @@
 import React, { useContext } from "react"
-import { LangContext, ZH, LANG_OPTIONS } from "./LangContext"
-import { navigate } from "gatsby"
-import { Select, Button, Divider } from "antd"
+import { LangContext, LANG_OPTIONS } from "./LangContext"
+import { Link } from "gatsby"
+import { Button, Divider, Radio } from "antd"
 import { WEBSITES } from "./Websites"
-
-const { Option } = Select
 
 export default props => {
   const { hiddenSet, showAll, hideAll } = props
@@ -12,20 +10,13 @@ export default props => {
   const isAllCollapsed = hiddenSet.size === WEBSITES.length
   return (
     <div className="nav">
-      <Select
-        defaultValue={lang}
-        dropdownMatchSelectWidth={false}
-        onChange={value => {
-          navigate(value === ZH ? "/" : value)
-        }}
-      >
-        {LANG_OPTIONS.map(({ value, name }) => (
-          <Option key={value} value={value}>
-            {name}
-          </Option>
+      <Radio.Group defaultValue={lang} buttonStyle="outline">
+        {LANG_OPTIONS.map(({ name, value }) => (
+          <Radio.Button key={name} value={value}>
+            <Link to={value}>{name}</Link>
+          </Radio.Button>
         ))}
-      </Select>{" "}
-      🌐
+      </Radio.Group>
       <Divider type="vertical" />
       <Button
         icon={isAllCollapsed ? "right" : "down"}

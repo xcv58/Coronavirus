@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Row } from "antd"
 import Website from "./Website"
+import { LangContext, ZH } from "./LangContext"
 
 export const WEBSITES = [
   {
@@ -67,9 +68,18 @@ export const WEBSITES = [
   },
 ]
 
+const getWebsites = lang => {
+  if (lang === ZH) {
+    return WEBSITES.filter(({ isChinese }) => isChinese)
+  }
+  return WEBSITES
+}
+
 export default props => {
+  const lang = useContext(LangContext)
   const { hiddenSet, toggleWebsite } = props
-  const sites = WEBSITES.map(website => {
+  const websites = getWebsites(lang)
+  const sites = websites.map(website => {
     const isHidden = hiddenSet.has(website.name)
     return (
       <Website

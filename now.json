@@ -1,5 +1,4 @@
 {
-  "name": "coronavirus",
   "version": 2,
   "build": {
     "env": {
