@@ -1,7 +1,15 @@
-import { useContext } from "react"
-import { LangContext, ZH, EN } from "./LangContext"
+import { ZH, EN } from "./useLang"
+import useLang from "./useLang"
 
-const WEBSITES = [
+export type Website = {
+  isChinese: boolean
+  supportGoogleTranslate: boolean
+  large?: boolean
+  name: string
+  url: string
+}
+
+const WEBSITES: Website[] = [
   {
     isChinese: true,
     supportGoogleTranslate: true,
@@ -69,14 +77,19 @@ const WEBSITES = [
 const TRANSLATE_URL_PREFIX =
   "https://translate.google.com/translate?hl=en&sl=zh-CN&tl=en&u="
 
-const getRenderUrl = ({ url, isChinese, supportGoogleTranslate, lang }) => {
+const getRenderUrl = ({
+  url,
+  isChinese,
+  supportGoogleTranslate,
+  lang,
+}: Website & { lang: string }) => {
   if (!isChinese) {
     return url
   }
   switch (lang) {
     case EN:
       if (!supportGoogleTranslate) {
-        return null
+        return ""
       }
       return `${TRANSLATE_URL_PREFIX}${url}`
     default:
@@ -85,18 +98,17 @@ const getRenderUrl = ({ url, isChinese, supportGoogleTranslate, lang }) => {
 }
 
 const useWebsites = () => {
-  const lang = useContext(LangContext)
+  const lang = useLang()
   if (lang === ZH) {
     return WEBSITES.filter(({ isChinese }) => isChinese)
   }
   if (lang === EN) {
-    return WEBSITES.map(website => {
+    return WEBSITES.filter(
+      website => !website.isChinese || website.supportGoogleTranslate
+    ).map(website => {
       const url = getRenderUrl({ ...website, lang })
-      if (!url) {
-        return null
-      }
       return { ...website, url }
-    }).filter(x => x)
+    })
   }
   return WEBSITES
 }

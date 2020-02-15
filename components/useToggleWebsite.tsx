@@ -12,7 +12,7 @@ const useToggleWebsite = () => {
       .join(",")
   })
   const hiddenSet = new Set(hiddenWebsites.split(","))
-  const toggleWebsite = website => {
+  const toggleWebsite = (website: string) => {
     const newSet = new Set(hiddenSet)
     if (hiddenSet.has(website)) {
       newSet.delete(website)
@@ -22,7 +22,7 @@ const useToggleWebsite = () => {
     setHiddenWebsites([...newSet].join(","))
   }
   const showAll = () => setHiddenWebsites("")
-  const hideAll = websites => {
+  const hideAll = (websites: string[]) => {
     setHiddenWebsites(websites.join(","))
   }
   return {

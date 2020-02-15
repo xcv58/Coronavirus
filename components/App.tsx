@@ -1,19 +1,17 @@
 import React from "react"
-import SEO from "./seo"
 import Websites from "./Websites"
 import ProgressBar from "react-scroll-progress-bar"
 import Nav from "./Nav"
-import "antd/dist/antd.css"
-import "./styles.css"
 import { BackTop } from "antd"
 import useToggleWebsite from "./useToggleWebsite"
+import useGA from "./useGA"
 
 export default () => {
   const toggleWebsite = useToggleWebsite()
+  useGA()
   return (
     <>
       <ProgressBar />
-      <SEO />
       <Nav {...toggleWebsite} />
       <Websites {...toggleWebsite} />
       <BackTop />
