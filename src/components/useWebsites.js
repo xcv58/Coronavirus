@@ -1,6 +1,4 @@
-import React, { useContext } from "react"
-import { Row } from "antd"
-import Website from "./Website"
+import { useContext } from "react"
 import { LangContext, ZH, EN } from "./LangContext"
 
 const WEBSITES = [
