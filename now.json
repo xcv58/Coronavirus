@@ -5,7 +5,7 @@
       "GA_TRACKING_ID": "@coronavirus-ga-tracking-id"
     }
   },
-  "routes": [{
+  "redirects": [{
       "src": "/en",
       "destination": "/?lang=en",
       "statusCode": 301
