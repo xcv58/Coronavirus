@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react"
 import Iframe from "react-iframe"
 import { Skeleton, Button, Collapse, Col, Divider } from "antd"
 import classNames from "classnames"
+import { Website } from "./useWebsites"
 import WebsiteTitle from "./WebsiteTitle"
 
-const Website = ({ loading, url }) => {
+const WebsiteComp = ({ loading, url }: any) => {
   const className = "iframe"
   const [isPending, setPending] = useState(false)
   useEffect(() => {
@@ -37,7 +38,9 @@ const Website = ({ loading, url }) => {
   )
 }
 
-export default props => {
+export default (
+  props: Website & { isHidden: boolean; toggleWebsite: Function }
+) => {
   const { name, large, isHidden, toggleWebsite, url } = props
   const [loading, setLoading] = useState(false)
   if (!url) {
@@ -50,7 +53,7 @@ export default props => {
     lg: factor * 6,
     xxl: factor * 4,
   }
-  const title = <WebsiteTitle {...{ name, url, loading, setLoading }} />
+  const title = <WebsiteTitle {...props} />
   return (
     <Col
       {...span}
@@ -69,7 +72,6 @@ export default props => {
         <Collapse.Panel
           key={name}
           header={title}
-          bordered={false}
           extra={
             !isHidden && (
               <>
@@ -88,7 +90,7 @@ export default props => {
             )
           }
         >
-          {!isHidden && <Website {...{ loading, url }} />}
+          {!isHidden && <WebsiteComp {...{ loading, url }} />}
         </Collapse.Panel>
       </Collapse>
     </Col>

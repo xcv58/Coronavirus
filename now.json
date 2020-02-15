@@ -5,5 +5,16 @@
       "GA_TRACKING_ID": "@coronavirus-ga-tracking-id"
     }
   },
-  "routes": [{ "handle": "filesystem" }, { "src": "/(.*)", "dest": "404.html" }]
+  "redirects": [
+    {
+      "source": "/en",
+      "destination": "/?lang=en",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh",
+      "destination": "/?lang=zh",
+      "statusCode": 301
+    }
+  ]
 }
