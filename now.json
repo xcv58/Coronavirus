@@ -6,12 +6,12 @@
     }
   },
   "redirects": [{
-      "src": "/en",
+      "source": "/en",
       "destination": "/?lang=en",
       "statusCode": 301
     },
     {
-      "src": "/zh",
+      "source": "/zh",
       "destination": "/?lang=zh",
       "statusCode": 301
     }
