@@ -72,7 +72,6 @@ export default (
         <Collapse.Panel
           key={name}
           header={title}
-          // bordered={false}
           extra={
             !isHidden && (
               <>
