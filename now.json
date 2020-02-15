@@ -4,5 +4,16 @@
     "env": {
       "GA_TRACKING_ID": "@coronavirus-ga-tracking-id"
     }
-  }
+  },
+  "routes": [{
+      "src": "/en",
+      "destination": "/?lang=en",
+      "statusCode": 301
+    },
+    {
+      "src": "/zh",
+      "destination": "/?lang=zh",
+      "statusCode": 301
+    }
+  ]
 }
