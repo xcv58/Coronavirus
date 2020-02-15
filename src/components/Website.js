@@ -1,27 +1,8 @@
-import React, { useContext, useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import Iframe from "react-iframe"
-import { LangContext, EN } from "./LangContext"
 import { Skeleton, Button, Collapse, Col, Divider } from "antd"
 import classNames from "classnames"
 import WebsiteTitle from "./WebsiteTitle"
-
-const TRANSLATE_URL_PREFIX =
-  "https://translate.google.com/translate?hl=en&sl=zh-CN&tl=en&u="
-
-const getRenderUrl = ({ url, isChinese, supportGoogleTranslate, lang }) => {
-  if (!isChinese) {
-    return url
-  }
-  switch (lang) {
-    case EN:
-      if (!supportGoogleTranslate) {
-        return null
-      }
-      return `${TRANSLATE_URL_PREFIX}${url}`
-    default:
-  }
-  return url
-}
 
 const Website = ({ loading, url }) => {
   const className = "iframe"
@@ -57,9 +38,7 @@ const Website = ({ loading, url }) => {
 }
 
 export default props => {
-  const { name, large, isHidden, toggleWebsite } = props
-  const lang = useContext(LangContext)
-  const url = getRenderUrl({ ...props, lang })
+  const { name, large, isHidden, toggleWebsite, url } = props
   const [loading, setLoading] = useState(false)
   if (!url) {
     return null

@@ -2,12 +2,13 @@ import React, { useContext } from "react"
 import { LangContext, LANG_OPTIONS } from "./LangContext"
 import { Link } from "gatsby"
 import { Button, Divider, Radio } from "antd"
-import { WEBSITES } from "./Websites"
+import useWebsites from "./useWebsites"
 
 export default props => {
+  const websites = useWebsites()
   const { hiddenSet, showAll, hideAll } = props
   const lang = useContext(LangContext)
-  const isAllCollapsed = hiddenSet.size === WEBSITES.length
+  const isAllCollapsed = hiddenSet.size === websites.length
   return (
     <div className="nav">
       <Radio.Group defaultValue={lang} buttonStyle="outline">
@@ -24,7 +25,7 @@ export default props => {
           if (isAllCollapsed) {
             showAll()
           } else {
-            hideAll(WEBSITES.map(x => x.name))
+            hideAll(websites.map(x => x.name))
           }
         }}
       />
