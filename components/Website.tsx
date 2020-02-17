@@ -5,7 +5,7 @@ import classNames from "classnames"
 import { Website } from "./useWebsites"
 import WebsiteTitle from "./WebsiteTitle"
 
-const WebsiteComp = ({ loading, url }: any) => {
+const WebsiteComp = ({ loading, name, url }: Website & { loading: boolean }) => {
   const className = "iframe"
   const [isPending, setPending] = useState(false)
   useEffect(() => {
@@ -26,6 +26,7 @@ const WebsiteComp = ({ loading, url }: any) => {
       {loadingIndicator}
       {!loading && (
         <Iframe
+          title={name}
           url={url}
           width="100%"
           className={classNames(className, {
@@ -91,7 +92,7 @@ export default (
             )
           }
         >
-          {!isHidden && <WebsiteComp {...{ loading, url }} />}
+          {!isHidden && <WebsiteComp {...props} {...{ loading }} />}
         </Collapse.Panel>
       </Collapse>
     </Col>
