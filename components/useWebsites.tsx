@@ -18,12 +18,6 @@ const WEBSITES: Website[] = [
   },
   {
     isChinese: true,
-    supportGoogleTranslate: true,
-    name: "疫情新增明细",
-    url: "https://yiqing.limou.cc",
-  },
-  {
-    isChinese: true,
     supportGoogleTranslate: false,
     name: "丁香园",
     url: "https://3g.dxy.cn/newh5/view/pneumonia",
