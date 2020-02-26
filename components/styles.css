@@ -41,3 +41,15 @@ iframe {
 .hide {
   height: 0.01px !important;
 }
+
+.fullscreen {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}
+
+.iframe-fullscreen {
+  width: 100vw;
+  height: 90vh;
+}

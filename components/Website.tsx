@@ -5,7 +5,12 @@ import classNames from "classnames"
 import { Website } from "./useWebsites"
 import WebsiteTitle from "./WebsiteTitle"
 
-const WebsiteComp = ({ loading, name, url }: Website & { loading: boolean }) => {
+const WebsiteComp = ({
+  loading,
+  name,
+  url,
+  isFullscreen,
+}: Website & { loading: boolean; isFullscreen: boolean }) => {
   const className = "iframe"
   const [isPending, setPending] = useState(false)
   useEffect(() => {
@@ -31,6 +36,7 @@ const WebsiteComp = ({ loading, name, url }: Website & { loading: boolean }) => 
           width="100%"
           className={classNames(className, {
             hide: isPending,
+            "iframe-fullscreen": isFullscreen,
           })}
           loading="auto"
         />
@@ -44,6 +50,7 @@ export default (
 ) => {
   const { name, large, isHidden, toggleWebsite, url, isChinese } = props
   const [loading, setLoading] = useState(false)
+  const [isFullscreen, setFullscreen] = useState(false)
   if (!url) {
     return null
   }
@@ -61,6 +68,7 @@ export default (
       className={classNames({
         website: !large,
         "wide-website": large,
+        fullscreen: isFullscreen,
       })}
       lang={isChinese ? "zh" : "en"}
     >
@@ -69,7 +77,12 @@ export default (
         expandIconPosition="right"
         bordered={false}
         destroyInactivePanel
-        onChange={() => toggleWebsite(name)}
+        onChange={targets => {
+          if (targets.length <= 0 && isFullscreen) {
+            setFullscreen(false)
+          }
+          toggleWebsite(name)
+        }}
       >
         <Collapse.Panel
           key={name}
@@ -87,12 +100,21 @@ export default (
                     setLoading(true)
                   }}
                 />
+                <Button
+                  icon={isFullscreen ? "fullscreen-exit" : "fullscreen"}
+                  onClick={e => {
+                    e.stopPropagation()
+                    setFullscreen(!isFullscreen)
+                  }}
+                />
                 <Divider type="vertical" />
               </>
             )
           }
         >
-          {!isHidden && <WebsiteComp {...props} {...{ loading }} />}
+          {!isHidden && (
+            <WebsiteComp {...props} {...{ loading, isFullscreen }} />
+          )}
         </Collapse.Panel>
       </Collapse>
     </Col>

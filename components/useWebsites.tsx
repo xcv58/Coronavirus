@@ -38,7 +38,8 @@ const WEBSITES: Website[] = [
     isChinese: false,
     supportGoogleTranslate: false,
     name: "Noticias Tracker",
-    url: "https://www.google.com/maps/d/embed?mid=1a04iBi41DznkMaQRnICO40ktROfnMfMx",
+    url:
+      "https://www.google.com/maps/d/embed?mid=1a04iBi41DznkMaQRnICO40ktROfnMfMx",
   },
   {
     isChinese: false,
