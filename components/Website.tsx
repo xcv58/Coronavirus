@@ -42,7 +42,7 @@ const WebsiteComp = ({
             hide: isPending,
             "iframe-fullscreen": isFullscreen,
           })}
-          loading="auto"
+          loading="lazy"
         />
       )}
     </>
