@@ -18,12 +18,6 @@ const WEBSITES: Website[] = [
   },
   {
     isChinese: true,
-    supportGoogleTranslate: false,
-    name: "疫情晴雨表",
-    url: "http://vis.pku.edu.cn/ncov/barometer/",
-  },
-  {
-    isChinese: true,
     supportGoogleTranslate: true,
     name: "疫情新增明细",
     url: "https://yiqing.limou.cc",
