@@ -5,9 +5,9 @@
   "version": "0.0.1",
   "author": "xcv58 <i@xcv58.com>",
   "dependencies": {
-    "antd": "^3.26.9",
+    "antd": "^3.26.12",
     "classnames": "^2.2.6",
-    "next": "^9.2.1",
+    "next": "^9.2.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-ga": "^2.7.0",
@@ -18,12 +18,12 @@
   "devDependencies": {
     "@next/bundle-analyzer": "^9.2.2",
     "@types/classnames": "^2.2.9",
-    "@types/node": "^13.7.1",
-    "@types/react": "^16.9.16",
+    "@types/node": "^13.7.6",
+    "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.4",
     "@types/use-persisted-state": "^0.3.0",
     "prettier": "^1.19.1",
-    "typescript": "3.7.5"
+    "typescript": "3.8.2"
   },
   "keywords": [
     "coronavirus",
