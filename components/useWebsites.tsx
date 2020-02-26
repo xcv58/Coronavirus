@@ -17,12 +17,6 @@ const WEBSITES: Website[] = [
     url: "https://news.qq.com/zt2020/page/feiyan.htm",
   },
   {
-    isChinese: false,
-    supportGoogleTranslate: false,
-    name: "BNO Noticias Coronavirus tracker",
-    url: "https://www.google.com/maps/d/embed?mid=1a04iBi41DznkMaQRnICO40ktROfnMfMx",
-  },
-  {
     isChinese: true,
     supportGoogleTranslate: true,
     name: "疫情新增明细",
@@ -39,6 +33,12 @@ const WEBSITES: Website[] = [
     supportGoogleTranslate: false,
     name: "凤凰新闻",
     url: "https://news.ifeng.com/c/special/7tPlDSzDgVk",
+  },
+  {
+    isChinese: false,
+    supportGoogleTranslate: false,
+    name: "BNO Noticias Coronavirus tracker",
+    url: "https://www.google.com/maps/d/embed?mid=1a04iBi41DznkMaQRnICO40ktROfnMfMx",
   },
   {
     isChinese: false,
