@@ -37,7 +37,7 @@ const WEBSITES: Website[] = [
   {
     isChinese: false,
     supportGoogleTranslate: false,
-    name: "BNO Noticias Coronavirus tracker",
+    name: "Noticias Tracker",
     url: "https://www.google.com/maps/d/embed?mid=1a04iBi41DznkMaQRnICO40ktROfnMfMx",
   },
   {
