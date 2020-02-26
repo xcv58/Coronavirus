@@ -51,12 +51,6 @@ const WEBSITES: Website[] = [
   {
     isChinese: true,
     supportGoogleTranslate: false,
-    name: "搜狗搜索",
-    url: "https://sa.sogou.com/new-weball/page/sgs/epidemic",
-  },
-  {
-    isChinese: true,
-    supportGoogleTranslate: false,
     name: "百度",
     url: "https://voice.baidu.com/act/newpneumonia/newpneumonia",
   },
