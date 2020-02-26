@@ -20,7 +20,11 @@ const WebsiteComp = ({
     }
   }, [loading])
   const loadingIndicator = (isPending || loading) && (
-    <div className={className}>
+    <div
+      className={classNames(className, {
+        "iframe-fullscreen": isFullscreen,
+      })}
+    >
       <Skeleton active />
       <Skeleton active />
       <Skeleton active />
