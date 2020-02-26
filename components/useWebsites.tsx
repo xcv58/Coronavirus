@@ -36,6 +36,12 @@ const WEBSITES: Website[] = [
   },
   {
     isChinese: false,
+    supportGoogleTranslate: false,
+    name: "Noticias Tracker",
+    url: "https://www.google.com/maps/d/embed?mid=1a04iBi41DznkMaQRnICO40ktROfnMfMx",
+  },
+  {
+    isChinese: false,
     supportGoogleTranslate: true,
     name: "BNO",
     url: "https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/",
