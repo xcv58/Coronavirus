@@ -46,7 +46,7 @@ const WebsiteComp = ({
       className={classNames(className)}
       style={{
         height: FULLSCREEN_STYLE.height,
-        background: 'white'
+        background: "white",
       }}
     >
       <Skeleton active />

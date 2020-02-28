@@ -44,6 +44,12 @@ iframe {
   }
 }
 
+@media (max-width: 767px) {
+  .main {
+    padding-right: 1rem;
+  }
+}
+
 .hide {
   height: 0.01px !important;
 }
