@@ -84,9 +84,9 @@ export default (
   }
   const factor = large ? 2 : 1
   const span = {
-    sm: factor * 12,
-    md: factor * 8,
-    lg: factor * 6,
+    xs: 24,
+    md: factor * 12,
+    xl: factor * 6,
     xxl: factor * 4,
   }
   const title = <WebsiteTitle {...props} />
