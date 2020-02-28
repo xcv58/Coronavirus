@@ -98,7 +98,6 @@ export default (
         "wide-website": large,
       })}
       lang={isChinese ? "zh" : "en"}
-      style={getFullscreenStyle(isFullscreen)}
     >
       <Collapse
         activeKey={isHidden ? "" : name}
