@@ -1,9 +1,31 @@
 import React, { useState, useEffect } from "react"
 import Iframe from "react-iframe"
+import {
+  ReloadOutlined,
+  FullscreenExitOutlined,
+  FullscreenOutlined,
+} from "@ant-design/icons"
 import { Skeleton, Button, Collapse, Col, Divider } from "antd"
 import classNames from "classnames"
 import { Website } from "./useWebsites"
 import WebsiteTitle from "./WebsiteTitle"
+
+const FULLSCREEN_STYLE = {
+  position: "fixed",
+  top: 0,
+  bottom: 0,
+  left: 0,
+  right: 0,
+  overflow: "auto",
+  width: "100vw",
+  maxWidth: "100vw",
+  flexBasis: "100vw",
+  height: "100vh",
+  zIndex: 999,
+}
+
+const getFullscreenStyle = (isFullscreen: boolean) =>
+  isFullscreen ? FULLSCREEN_STYLE : {}
 
 const WebsiteComp = ({
   loading,
@@ -21,9 +43,11 @@ const WebsiteComp = ({
   }, [loading])
   const loadingIndicator = (isPending || loading) && (
     <div
-      className={classNames(className, {
-        "iframe-fullscreen": isFullscreen,
-      })}
+      className={classNames(className)}
+      style={{
+        height: FULLSCREEN_STYLE.height,
+        background: "white",
+      }}
     >
       <Skeleton active />
       <Skeleton active />
@@ -60,9 +84,9 @@ export default (
   }
   const factor = large ? 2 : 1
   const span = {
-    sm: factor * 12,
-    md: factor * 8,
-    lg: factor * 6,
+    xs: 24,
+    md: factor * 12,
+    xl: factor * 6,
     xxl: factor * 4,
   }
   const title = <WebsiteTitle {...props} />
@@ -72,7 +96,6 @@ export default (
       className={classNames({
         website: !large,
         "wide-website": large,
-        fullscreen: isFullscreen,
       })}
       lang={isChinese ? "zh" : "en"}
     >
@@ -89,13 +112,14 @@ export default (
         }}
       >
         <Collapse.Panel
+          style={getFullscreenStyle(isFullscreen)}
           key={name}
           header={title}
           extra={
             !isHidden && (
               <>
                 <Button
-                  icon="reload"
+                  icon={<ReloadOutlined />}
                   loading={loading}
                   disabled={loading}
                   onClick={e => {
@@ -105,7 +129,13 @@ export default (
                   }}
                 />
                 <Button
-                  icon={isFullscreen ? "fullscreen-exit" : "fullscreen"}
+                  icon={
+                    isFullscreen ? (
+                      <FullscreenExitOutlined />
+                    ) : (
+                      <FullscreenOutlined />
+                    )
+                  }
                   onClick={e => {
                     e.stopPropagation()
                     setFullscreen(!isFullscreen)

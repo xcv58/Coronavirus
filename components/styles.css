@@ -34,27 +34,31 @@ iframe {
 }
 
 @media (min-width: 1921px) {
-  .website { width: 414px !important; }
-  .wide-website { width: 896.4px !important; }
+  .website {
+    width: 414px !important;
+    max-width: 414px !important;
+  }
+  .wide-website {
+    width: 896.4px !important;
+    max-width: 896.4px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .main {
+    padding-right: 1rem;
+  }
 }
 
 .hide {
   height: 0.01px !important;
 }
 
-.fullscreen {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: auto;
-  width: 100vw !important;
-  height: 100vh;
-  z-index: 999;
-}
-
 .iframe-fullscreen {
   width: 100vw;
   height: calc(100vh - 56px);
+}
+
+.ant-collapse-header {
+  background-color:rgb(250, 250, 250);
 }

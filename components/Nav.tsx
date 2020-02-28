@@ -1,5 +1,6 @@
 import React from "react"
 import { LANG_OPTIONS, ALL } from "./useLang"
+import { RightOutlined, DownOutlined } from "@ant-design/icons"
 import { Button, Divider, Radio } from "antd"
 import useWebsites from "./useWebsites"
 import Link from "next/link"
@@ -29,7 +30,7 @@ export default (props: any) => {
       </Radio.Group>
       <Divider type="vertical" />
       <Button
-        icon={isAllCollapsed ? "right" : "down"}
+        icon={isAllCollapsed ? <RightOutlined /> : <DownOutlined />}
         onClick={() => {
           if (isAllCollapsed) {
             showAll()
