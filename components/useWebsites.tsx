@@ -25,6 +25,12 @@ const WEBSITES: Website[] = [
   {
     isChinese: true,
     supportGoogleTranslate: false,
+    name: "北美",
+    url: "https://coronavirus.1point3acres.com/",
+  },
+  {
+    isChinese: true,
+    supportGoogleTranslate: false,
     name: "丁香园",
     url: "https://3g.dxy.cn/newh5/view/pneumonia",
   },
