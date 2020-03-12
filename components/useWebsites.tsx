@@ -110,9 +110,7 @@ const useWebsites = () => {
     return WEBSITES.filter(({ isChinese }) => isChinese)
   }
   if (lang === EN) {
-    return WEBSITES.filter(
-      website => !website.isChinese
-    ).map(website => {
+    return WEBSITES.filter(website => !website.isChinese).map(website => {
       const url = getRenderUrl({ ...website, lang })
       return { ...website, url }
     })

@@ -42,13 +42,7 @@ const WebsiteComp = ({
     }
   }, [loading])
   const loadingIndicator = (isPending || loading) && (
-    <div
-      className={classNames(className)}
-      style={{
-        height: FULLSCREEN_STYLE.height,
-        background: "white",
-      }}
-    >
+    <div className={className}>
       <Skeleton active />
       <Skeleton active />
       <Skeleton active />
