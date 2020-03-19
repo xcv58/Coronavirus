@@ -11,6 +11,33 @@ export type Website = {
 
 const WEBSITES: Website[] = [
   {
+    isChinese: false,
+    supportGoogleTranslate: true,
+    name: "nCoV2019.live",
+    url: "https://ncov2019.live",
+  },
+  {
+    isChinese: false,
+    supportGoogleTranslate: true,
+    name: "BNO",
+    url: "https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/",
+  },
+  {
+    isChinese: false,
+    supportGoogleTranslate: false,
+    name: "Tracker",
+    url:
+      "https://www.google.com/maps/d/embed?mid=1a04iBi41DznkMaQRnICO40ktROfnMfMx",
+  },
+  {
+    isChinese: false,
+    supportGoogleTranslate: false,
+    name: "JHU",
+    url:
+      "https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6",
+    large: true,
+  },
+  {
     isChinese: true,
     supportGoogleTranslate: true,
     name: "腾讯新闻",
@@ -39,27 +66,6 @@ const WEBSITES: Website[] = [
     supportGoogleTranslate: false,
     name: "凤凰新闻",
     url: "https://news.ifeng.com/c/special/7tPlDSzDgVk",
-  },
-  {
-    isChinese: false,
-    supportGoogleTranslate: false,
-    name: "Tracker",
-    url:
-      "https://www.google.com/maps/d/embed?mid=1a04iBi41DznkMaQRnICO40ktROfnMfMx",
-  },
-  {
-    isChinese: false,
-    supportGoogleTranslate: true,
-    name: "BNO",
-    url: "https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/",
-  },
-  {
-    isChinese: false,
-    supportGoogleTranslate: false,
-    name: "JHU",
-    url:
-      "https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6",
-    large: true,
   },
   {
     isChinese: true,
