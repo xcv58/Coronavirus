@@ -39,6 +39,12 @@ const WEBSITES: Website[] = [
   },
   {
     isChinese: true,
+    supportGoogleTranslate: false,
+    name: "美国疫情",
+    url: "https://m.dealmoon.com/guide/934164",
+  },
+  {
+    isChinese: true,
     supportGoogleTranslate: true,
     name: "腾讯新闻",
     url: "https://news.qq.com/zt2020/page/feiyan.htm",
