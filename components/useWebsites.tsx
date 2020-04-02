@@ -23,6 +23,19 @@ const WEBSITES: Website[] = [
     url: "https://bnonews.com/index.php/2020/01/the-latest-coronavirus-cases/",
   },
   {
+    isChinese: true,
+    supportGoogleTranslate: false,
+    name: "美国疫情",
+    url: "https://m.dealmoon.com/guide/934164",
+    large: true,
+  },
+  {
+    isChinese: true,
+    supportGoogleTranslate: false,
+    name: "北美",
+    url: "https://coronavirus.1point3acres.com/",
+  },
+  {
     isChinese: false,
     supportGoogleTranslate: false,
     name: "Tracker",
@@ -39,12 +52,6 @@ const WEBSITES: Website[] = [
   },
   {
     isChinese: true,
-    supportGoogleTranslate: false,
-    name: "美国疫情",
-    url: "https://m.dealmoon.com/guide/934164",
-  },
-  {
-    isChinese: true,
     supportGoogleTranslate: true,
     name: "腾讯新闻",
     url: "https://news.qq.com/zt2020/page/feiyan.htm",
@@ -54,12 +61,6 @@ const WEBSITES: Website[] = [
     supportGoogleTranslate: true,
     name: "疫情新增明细",
     url: "https://yiqing.limou.cc",
-  },
-  {
-    isChinese: true,
-    supportGoogleTranslate: false,
-    name: "北美",
-    url: "https://coronavirus.1point3acres.com/",
   },
   {
     isChinese: true,
