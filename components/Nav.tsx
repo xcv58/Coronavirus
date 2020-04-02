@@ -11,7 +11,7 @@ export default (props: any) => {
   const { hiddenSet, showAll, hideAll } = props
   const lang = useLang()
   const isAllCollapsed =
-    websites.filter(x => !hiddenSet.has(x.name)).length === 0
+    websites.filter((x) => !hiddenSet.has(x.name)).length === 0
   return (
     <nav>
       <Radio.Group value={lang} buttonStyle="outline">
@@ -35,7 +35,7 @@ export default (props: any) => {
           if (isAllCollapsed) {
             showAll()
           } else {
-            hideAll(websites.map(x => x.name))
+            hideAll(websites.map((x) => x.name))
           }
         }}
       />

@@ -98,7 +98,7 @@ export default (
         expandIconPosition="right"
         bordered={false}
         destroyInactivePanel
-        onChange={targets => {
+        onChange={(targets) => {
           if (targets.length <= 0 && isFullscreen) {
             setFullscreen(false)
           }
@@ -116,7 +116,7 @@ export default (
                   icon={<ReloadOutlined />}
                   loading={loading}
                   disabled={loading}
-                  onClick={e => {
+                  onClick={(e) => {
                     e.stopPropagation()
                     setTimeout(() => setLoading(false), 10)
                     setLoading(true)
@@ -130,7 +130,7 @@ export default (
                       <FullscreenOutlined />
                     )
                   }
-                  onClick={e => {
+                  onClick={(e) => {
                     e.stopPropagation()
                     setFullscreen(!isFullscreen)
                   }}

@@ -10,7 +10,7 @@ export default (props: Website) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      onClick={e => e.stopPropagation()}
+      onClick={(e) => e.stopPropagation()}
     >
       {name}
     </Button>

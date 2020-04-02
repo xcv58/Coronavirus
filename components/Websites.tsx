@@ -6,7 +6,7 @@ import useWebsites from "./useWebsites"
 export default (props: any) => {
   const { hiddenSet, toggleWebsite } = props
   const websites = useWebsites()
-  const sites = websites.map(website => {
+  const sites = websites.map((website) => {
     const isHidden = hiddenSet.has(website.name)
     return (
       <Website

@@ -8,7 +8,7 @@ const useToggleWebsite = () => {
   const [hiddenWebsites, setHiddenWebsites] = useHiddenWebsites(() => {
     return allWebsites
       .slice(3)
-      .map(x => x.name)
+      .map((x) => x.name)
       .join(",")
   })
   const hiddenSet = new Set(hiddenWebsites.split(","))
