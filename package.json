@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "author": "xcv58 <i@xcv58.com>",
   "dependencies": {
-    "antd": "4.1.1",
+    "antd": "4.1.2",
     "classnames": "2.2.6",
     "next": "9.3.4",
     "react": "16.13.1",
@@ -18,11 +18,11 @@
   "devDependencies": {
     "@next/bundle-analyzer": "9.3.4",
     "@types/classnames": "2.2.10",
-    "@types/node": "13.11.0",
-    "@types/react": "16.9.32",
+    "@types/node": "13.11.1",
+    "@types/react": "16.9.34",
     "@types/react-dom": "16.9.6",
     "@types/use-persisted-state": "0.3.0",
-    "prettier": "2.0.3",
+    "prettier": "2.0.4",
     "typescript": "3.8.3"
   },
   "keywords": [
