@@ -4432,7 +4432,7 @@ rc-virtual-list@^1.1.2:
     raf "^3.4.1"
     rc-util "^4.8.0"
 
-react-dom@16.13.1, react-dom@^16.12.0:
+react-dom@16.13.1, react-dom@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
   integrity sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
@@ -4469,16 +4469,16 @@ react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-react-scroll-progress-bar@1.1.11:
-  version "1.1.11"
-  resolved "https://registry.yarnpkg.com/react-scroll-progress-bar/-/react-scroll-progress-bar-1.1.11.tgz#fad8ce042b91232894613981dd7fd83cb578e84f"
-  integrity sha512-xvBnHZTRFHWBpCaI6kc0Xif9b+nd1Zca6Z1I82xJTJHYEFdxE0aUemjUsfSznV4mALVxobuMucVQhFBXHb0pLw==
+react-scroll-progress-bar@1.1.12:
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/react-scroll-progress-bar/-/react-scroll-progress-bar-1.1.12.tgz#eae8e0d8090e1be48f4e4eb42113713f64514b00"
+  integrity sha512-H3eEER6SHDhXgpLcWfA5LVdqhAJY0Nit0ypr4+zJ8sEGDacBtEndWP85yf75J235q+hbdscKBgpHd6NcZhk+jw==
   dependencies:
     prop-types "^15.7.2"
-    react "^16.12.0"
-    react-dom "^16.12.0"
+    react "^16.13.1"
+    react-dom "^16.13.1"
 
-react@16.13.1, react@^16.12.0:
+react@16.13.1, react@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
