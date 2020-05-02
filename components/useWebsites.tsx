@@ -38,7 +38,8 @@ const WEBSITES: Website[] = [
     isChinese: false,
     supportGoogleTranslate: false,
     name: "LA Times",
-    url: "https://www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/",
+    url:
+      "https://www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/",
   },
   {
     isChinese: false,
@@ -73,42 +74,6 @@ const WEBSITES: Website[] = [
     url:
       "https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6",
     large: true,
-  },
-  {
-    isChinese: true,
-    supportGoogleTranslate: true,
-    name: "腾讯新闻",
-    url: "https://news.qq.com/zt2020/page/feiyan.htm",
-  },
-  {
-    isChinese: true,
-    supportGoogleTranslate: false,
-    name: "丁香园",
-    url: "https://3g.dxy.cn/newh5/view/pneumonia",
-  },
-  {
-    isChinese: true,
-    supportGoogleTranslate: false,
-    name: "凤凰新闻",
-    url: "https://news.ifeng.com/c/special/7tPlDSzDgVk",
-  },
-  {
-    isChinese: true,
-    supportGoogleTranslate: false,
-    name: "百度",
-    url: "https://voice.baidu.com/act/newpneumonia/newpneumonia",
-  },
-  {
-    isChinese: true,
-    supportGoogleTranslate: false,
-    name: "新浪",
-    url: "https://news.sina.cn/zt_d/yiqing0121",
-  },
-  {
-    isChinese: true,
-    supportGoogleTranslate: false,
-    name: "人民日报",
-    url: "https://activity.peopleapp.com/broadcast/",
   },
 ]
 
