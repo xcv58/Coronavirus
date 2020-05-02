@@ -5,24 +5,24 @@
   "version": "0.0.1",
   "author": "xcv58 <i@xcv58.com>",
   "dependencies": {
-    "antd": "4.1.2",
+    "antd": "4.2.0",
     "classnames": "2.2.6",
-    "next": "9.3.4",
+    "next": "9.3.6",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-ga": "2.7.0",
     "react-iframe": "1.8.0",
-    "react-scroll-progress-bar": "1.1.11",
+    "react-scroll-progress-bar": "1.1.12",
     "use-persisted-state": "0.3.0"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "9.3.4",
+    "@next/bundle-analyzer": "9.3.6",
     "@types/classnames": "2.2.10",
-    "@types/node": "13.11.1",
+    "@types/node": "13.13.4",
     "@types/react": "16.9.34",
-    "@types/react-dom": "16.9.6",
+    "@types/react-dom": "16.9.7",
     "@types/use-persisted-state": "0.3.0",
-    "prettier": "2.0.4",
+    "prettier": "2.0.5",
     "typescript": "3.8.3"
   },
   "keywords": [
