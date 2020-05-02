@@ -12,9 +12,33 @@ export type Website = {
 const WEBSITES: Website[] = [
   {
     isChinese: false,
-    supportGoogleTranslate: true,
+    supportGoogleTranslate: false,
     name: "nCoV2019.live",
     url: "https://ncov2019.live",
+  },
+  {
+    isChinese: false,
+    supportGoogleTranslate: false,
+    name: "Covid Act Now",
+    url: "https://covidactnow.org/",
+  },
+  {
+    isChinese: false,
+    supportGoogleTranslate: false,
+    name: "91-DIVOC",
+    url: "https://91-divoc.com/pages/covid-visualization/",
+  },
+  {
+    isChinese: false,
+    supportGoogleTranslate: false,
+    name: "COVID-19 Projections",
+    url: "https://covid19.healthdata.org/united-states-of-america",
+  },
+  {
+    isChinese: false,
+    supportGoogleTranslate: false,
+    name: "LA Times",
+    url: "https://www.latimes.com/projects/california-coronavirus-cases-tracking-outbreak/",
   },
   {
     isChinese: false,
