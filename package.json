@@ -18,7 +18,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "9.3.6",
     "@types/classnames": "2.2.10",
-    "@types/node": "13.13.4",
+    "@types/node": "13.13.5",
     "@types/react": "16.9.34",
     "@types/react-dom": "16.9.7",
     "@types/use-persisted-state": "0.3.0",
