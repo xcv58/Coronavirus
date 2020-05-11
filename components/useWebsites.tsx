@@ -13,12 +13,6 @@ const WEBSITES: Website[] = [
   {
     isChinese: false,
     supportGoogleTranslate: false,
-    name: "nCoV2019.live",
-    url: "https://ncov2019.live",
-  },
-  {
-    isChinese: false,
-    supportGoogleTranslate: false,
     name: "Covid Act Now",
     url: "https://covidactnow.org/",
   },
