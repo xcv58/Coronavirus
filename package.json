@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "author": "xcv58 <i@xcv58.com>",
   "dependencies": {
-    "antd": "4.2.0",
+    "antd": "4.2.2",
     "classnames": "2.2.6",
     "next": "9.4.0",
     "react": "16.13.1",
