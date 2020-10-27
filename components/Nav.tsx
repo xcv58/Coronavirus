@@ -6,7 +6,7 @@ import useWebsites from "./useWebsites"
 import Link from "next/link"
 import useLang from "./useLang"
 
-export default (props: any) => {
+const Nav = (props: any) => {
   const websites = useWebsites()
   const { hiddenSet, showAll, hideAll } = props
   const lang = useLang()
@@ -42,3 +42,5 @@ export default (props: any) => {
     </nav>
   )
 }
+
+export default Nav

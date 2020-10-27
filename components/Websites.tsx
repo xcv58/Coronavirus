@@ -3,7 +3,7 @@ import { Row } from "antd"
 import Website from "./Website"
 import useWebsites from "./useWebsites"
 
-export default (props: any) => {
+const Websites = (props: any) => {
   const { hiddenSet, toggleWebsite } = props
   const websites = useWebsites()
   const sites = websites.map((website) => {
@@ -22,3 +22,5 @@ export default (props: any) => {
     </main>
   )
 }
+
+export default Websites

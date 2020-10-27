@@ -2,7 +2,7 @@ import React from "react"
 import { Button } from "antd"
 import { Website } from "./useWebsites"
 
-export default (props: Website) => {
+const WebsiteTitle = (props: Website) => {
   const { name, url } = props
   return (
     <Button
@@ -16,3 +16,5 @@ export default (props: Website) => {
     </Button>
   )
 }
+
+export default WebsiteTitle

@@ -67,7 +67,7 @@ const WebsiteComp = ({
   )
 }
 
-export default (
+const WebsiteComponent = (
   props: Website & { isHidden: boolean; toggleWebsite: Function }
 ) => {
   const { name, large, isHidden, toggleWebsite, url, isChinese } = props
@@ -148,3 +148,5 @@ export default (
     </Col>
   )
 }
+
+export default WebsiteComponent
