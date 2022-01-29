@@ -34,8 +34,8 @@
   "license": "MIT",
   "scripts": {
     "analyze": "ANALYZE=true yarn build",
-    "dev": "next",
     "build": "next build",
+    "dev": "next",
     "start": "next start",
     "type-check": "tsc",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
