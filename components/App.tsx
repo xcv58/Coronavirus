@@ -6,7 +6,7 @@ import { BackTop } from "antd"
 import useToggleWebsite from "./useToggleWebsite"
 import useGA from "./useGA"
 
-export default () => {
+export default function App () {
   const toggleWebsite = useToggleWebsite()
   useGA()
   return (

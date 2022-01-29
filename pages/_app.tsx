@@ -5,7 +5,7 @@ import "antd/dist/antd.css"
 import "../components/styles.css"
 import useLang, { EN } from "../components/useLang"
 
-export default ({ Component, pageProps }: AppProps) => {
+export default function App ({ Component, pageProps }: AppProps) {
   const lang = useLang()
   const title =
     lang === EN ? "Coronavirus realtime website" : "实时疫情信息聚合"
